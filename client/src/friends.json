@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Bedrill",
+    "image": "/images/Bedrill.png",
+    "clicked": "false"
+  },
+  {
+    "id": 2,
+    "name": "Blastoise",
+    "image": "/images/Blastoise.png",
+    "clicked": "false"
+  },
+  {
+    "id": 3,
+    "name": "Bulbasaur",
+    "image": "/images/Bulbasaur.png",
+    "clicked": "false"
+  },
+  {
+    "id":4,
+    "name": "Butterfree",
+    "image": "/images/Butterfree.png",
+    "clicked": "false"
+  },
+  {
+    "id": 5,
+    "name": "Caterpie",
+    "image": "/images/Caterpie.png",
+    "clicked": "false"
+  },
+  {
+    "id": 6,
+    "name": "Charizard",
+    "image": "/images/Charizard.png",
+    "clicked": "false"
+  },
+  {
+    "id": 7,
+    "name": "Charmander",
+    "image": "/images/Charmander.png",
+    "clicked": "false"
+  },
+  {
+    "id": 8,
+    "name": "Charmeleon",
+    "image": "/images/Charmeleon.png",
+    "clicked": "false"
+  },
+  {
+    "id": 9,
+    "name": "Ivysaur",
+    "image": "/images/Ivysaur.png",
+    "clicked": "false"
+  },
+  {
+    "id": 10,
+    "name": "Kakuna",
+    "image": "/images/Kakuna.png",
+    "clicked": "false"
+  },
+  {
+    "id": 11,
+    "name": "Metapod",
+    "image": "/images/Metapod.png",
+    "clicked": "false"
+  },
+  {
+    "id": 12,
+    "name": "Pidgeot",
+    "image": "/images/Pidgeot.png",
+    "clicked": "false"
+  },
+  {
+    "id": 13,
+    "name": "Pidgeotto",
+    "image": "/images/Pidgeotto.png",
+    "clicked": "false"
+  },
+  {
+    "id": 14,
+    "name": "Pidgey",
+    "image": "/images/Pidgey.png",
+    "clicked": "false"
+  },
+  {
+    "id": 15,
+    "name": "Squirtle",
+    "image": "/images/Squirtle.png",
+    "clicked": "false"
+  },
+  {
+    "id": 16,
+    "name": "Venusaur",
+    "image": "/images/Venusaur.png",
+    "clicked": "false"
+  },
+  {
+    "id": 17,
+    "name": "Wartortle",
+    "image": "/images/Wartortle.png",
+    "clicked": "false"
+  },
+  {
+    "id": 18,
+    "name": "Weedle",
+    "image": "/images/Weedle.png",
+    "clicked": "false"
+  }
+]
