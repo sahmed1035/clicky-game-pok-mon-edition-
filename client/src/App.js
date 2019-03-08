@@ -5,22 +5,55 @@ import Title from "./components/Title";
 import friends from "./friends.json";
 import Navbar from "./components/Navbar";
 
+let score = 0;
+let topscore = 0;
+
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    clickedFriends: [],
+    friendClick:[],
     topscore:0,
     score:0
   };
 
-  friendClick = id => {
-   //shuffle
-   friends.sort(() => Math.random() - 0.5);
-    // Set this.state.friends equal to the new friends array
-    //globle enviornment that saves all the updates
-    this.setState({ friends });
+  shuffleCards = id => {
+let friendClick = friends.filter(friend => friend.id === id);
+
+// already clicked
+if (friendClick[0].clicked) {
+  score = 0;
+
+  // the value of all the cards is reinitialized to false
+  for (let i=0; i<friends.length; i++) {
+    friends[i].clicked = false;
+  }
+  this.setState({ friends, score: this.state.score});
+}
+
+else {
+  friendClick[0].clicked = true;
+  score ++;
+  
+  friends.sort(() => Math.random() -0.5);
+  this.setState({ friends, score: this.state.score +1});
+
+  //topscore
+  if (score > topscore) {
+    topscore = score;
+    this.setState({topscore});
+  }
+}
+
   };
+
+  // friendClick = id => {
+  //  //shuffle
+  //  friends.sort(() => Math.random() - 0.5);
+  //   // Set this.state.friends equal to the new friends array
+  //   //globle enviornment that saves all the updates
+  //   this.setState({ friends });
+  // };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -30,7 +63,7 @@ class App extends Component {
         <Title>Pokémon-Clicky-Game (Characters List)</Title>
         {this.state.friends.map(friend => (
           <FriendCard
-          removeFriend={this.removeFriend}
+          shuffleCards={this.shuffleCards}
             id={friend.id}
             key={friend.id}
             name={friend.name}
