@@ -12,7 +12,6 @@ class App extends Component {
     clickedFriends: [],
     topscore:0,
     score:0
-
   };
 
   friendClick = id => {
@@ -38,7 +37,6 @@ class App extends Component {
             image={friend.image}
           />
         ))}
-
       </Wrapper>
     );
   }
