@@ -1,17 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
 
-function  Navbar() {
-  return (<div className="navbar">
-      <ul>
-       <li ><a href="/"> Pokémon Edition Clicky Game </a></li>
-        <li class>Do NOT click on the same image Twice!</li>
-         <li> Score: </li>
-         <li> Top Score: </li>
-      </ul>
-     </div>
-  );
-}
+class  Navbar extends Component {
+  render() {
+    return (
+  
+      <div className="navbar">
+          <ul>
+           <li ><a href="/"> Pokémon Edition Clicky Game </a></li>
+            <li class>Do NOT click on the same image Twice!</li>
+             <li> Score: {this.props.score}</li>
+             <li> Top Score: {this.props.topscore}</li>
+          </ul>
+         </div>
+      );
+    }
+  }
+  
 
 export default  Navbar;
 

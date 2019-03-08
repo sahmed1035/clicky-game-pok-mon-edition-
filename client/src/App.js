@@ -12,58 +12,53 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
-    friendClick:[],
-    topscore:0,
-    score:0
+    topscore: 0,
+    score: 0
   };
 
   shuffleCards = id => {
-let friendClick = friends.filter(friend => friend.id === id);
+    let friends = this.state.friends;
+    let friendClick = friends.filter(friend => friend.id === id);
 
-// already clicked
-if (friendClick[0].clicked) {
-  score = 0;
+    // already clicked clicked=true
+    if (friendClick.clicked) {
+      score = 0;
 
-  // the value of all the cards is reinitialized to false
-  for (let i=0; i<friends.length; i++) {
-    friends[i].clicked = false;
-  }
-  this.setState({ friends, score: this.state.score});
-}
+      // the value of all the cards is reinitialized to false
+      for (let i = 0; i < friends.length; i++) {
+        friends[i].clicked = false;
+      }
+      this.setState({ friends, score });
+    }
 
-else {
-  friendClick[0].clicked = true;
-  score ++;
-  
-  friends.sort(() => Math.random() -0.5);
-  this.setState({ friends, score: this.state.score +1});
+    else {
+      friendClick.clicked = true;
+      score++;
 
-  //topscore
-  if (score > topscore) {
-    topscore = score;
-    this.setState({topscore});
-  }
-}
+      friends.sort(() => Math.random() - 0.5);
+      this.setState({ friends, score });
+
+      //topscore
+      if (score > topscore) {
+        topscore = score;
+        this.setState({ topscore });
+      }
+    }
 
   };
-
-  // friendClick = id => {
-  //  //shuffle
-  //  friends.sort(() => Math.random() - 0.5);
-  //   // Set this.state.friends equal to the new friends array
-  //   //globle enviornment that saves all the updates
-  //   this.setState({ friends });
-  // };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
-        <Navbar> </Navbar>
+        <Navbar 
+        score = {this.state.score}
+        topscore = {this.state.topscore}
+        /> 
         <Title>Pokémon-Clicky-Game (Characters List)</Title>
         {this.state.friends.map(friend => (
           <FriendCard
-          shuffleCards={this.shuffleCards}
+            shuffleCards={this.shuffleCards}
             id={friend.id}
             key={friend.id}
             name={friend.name}
