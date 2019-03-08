@@ -9,12 +9,13 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends,
+    clickedFriends: [],
     topscore:0,
     score:0
 
   };
 
-  removeFriend = id => {
+  friendClick = id => {
    //shuffle
    friends.sort(() => Math.random() - 0.5);
     // Set this.state.friends equal to the new friends array
@@ -35,13 +36,15 @@ class App extends Component {
             key={friend.id}
             name={friend.name}
             image={friend.image}
-            
           />
         ))}
-        
+
       </Wrapper>
     );
   }
 }
 
 export default App;
+
+
+
