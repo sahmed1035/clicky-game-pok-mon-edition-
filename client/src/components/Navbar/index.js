@@ -8,8 +8,8 @@ class  Navbar extends Component {
       <div className="navbar">
           <ul>
            <li ><a href="/"> Pokémon Edition Clicky Game </a></li>
-            <li class>Do NOT click on the same image Twice!</li>
-             <li> Score: {this.props.score}</li>
+            <li >Do NOT click on the same image Twice!</li>
+             <li> Score:{this.props.score} </li>
              <li> Top Score: {this.props.topscore}</li>
           </ul>
          </div>
