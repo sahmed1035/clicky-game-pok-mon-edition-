@@ -3,9 +3,9 @@ import "./style.css";
 
 function FriendCard(props) {
   return (
-    <div className="card" onClick={() => props.shuffleCards(props.id)} >
+    <div className="card" onClick={() => props.handleShuffleCards(props.id)} >
       <div className="img-container">
-        <img alt={props.name} src={props.image} id={props.id} />
+        <img className= "img" alt={props.name} src={props.image} id={props.id} />
       </div>
 
     </div>
