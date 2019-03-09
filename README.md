@@ -4,7 +4,7 @@
 Memory game. don't click the same image twice in a row. 
 
 ## Project Description
-Link to the site: [Words-Matter](https://syeda-friend-finder1.herokuapp.com/)
+Link to the site: [Clicky-Game-Pokemon](https://github.com/sahmed1035/clicky-game-pok-mon-edition-)
 This is a Pokemon memory game using React. Images of Pokemon characters are used in the cards. User is expected to click on an image and remember not to click it again. 
   
    * The user's score incrementes when clicking an image for the first time. 
